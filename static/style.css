@@ -1,0 +1,16 @@
+body {
+  color: black;
+  font-family: avenir;
+  margin: 0;
+  padding: 0;
+}
+
+input[type=text], select {
+  padding: 4px 7px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;}

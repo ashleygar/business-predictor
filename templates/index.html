@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <CENTER>
+      <title>The Business Predictor</title>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+          </head>
+            <img src="static/chicago.png"  style="width:auto;height:150px;" hspace="70" vspace="5"/>
+              <p style="font-size:4px;"> Image source:
+              <a href="https://toppng.com/freeuse-download-chicago-vector-transparent-chicago-skyline-outline-PNG-free-PNG-Images_185003">toppng</a><br>
+              <br/>
+           <body>
+            <div class="container" style="font-size:30px;font-family:avenir;" >The Business Predictor</div>
+            <br/>
+                <p style="font-family:avenir;font-size:13px">Enter the business information to estimate the probability </p>
+                <p style="font-family:avenir;font-size:13px">of its survival in Chicago after three years.</p>
+                <br/>
+                <form action = "/result" method="POST">
+                <label style="font-size:13px;" for="default">Business license type:</label>
+              <select id="license" name="license" style="font-family:avenir;font-size:11px" placeholder="Select license type" required>
+                <optgroup label="Select license type"></optgroup>
+                <optgroup label="Accommodations">
+                    <option value="bed_and_breakfast">Bed and breakfast</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="single_room_occupancy">Single room occupancy</option>
+                    <option value="vacation_rental">Vacation rental</option>
+                </optgroup>
+                <optgroup label="Animal Care and Services">
+                  <option value="animal_care">Animal care</option>
+                  <option value="animal_exhibition">Animal exhibition</option>
+                  <option value="grooming_facility">Grooming facility</option>
+                  <option value="humane_society">Humane society</option>
+                  <option value="kennels_and_catteries">Kennels and catteries</option>
+                  <option value="pet_shop">Pet shop</option>
+                  <option value="veterinary_hospital">Veterinary hospital</option>
+                </optgroup>
+                <optgroup label="Children Services">
+                  <option value="childrens_activities_facility">Childrens activities facility</option>
+                  <option value="childrens_services_facility">Childrens services facility</option>
+                  <option value="day_care_center">Day care center</option>
+                  <option value="night_care_privilege">Night care privilege</option>
+                </optgroup>
+                <optgroup label="Commercial and Business Services">
+                  <option value="automatic_amusement_device_operator">Automatic amusement device operator</option>
+                  <option value="day_labor_agency">Day labor agency</option>
+                  <option value="electronic_equipment_repair">Electronic equipment repair</option>
+                  <option value="expediter">Expediter</option>
+                  <option value="heliports">Heliports</option>
+                  <option value="junk_peddler">Junk peddler</option>
+                  <option value="laundry_services_late_hour">Laundry services - late hour</option>
+                  <option value="messenger_services">Messenger services</option>
+                  <option value="popup_retail_user">Popup retail user</option>
+                  <option value="private_booting_company">Private booting company</option>
+                  <option value="private_scavenger">Private scavenger</option>
+                  <option value="reposessor">Reposessor</option>
+                  <option value="residential_real_estate_developer">Residential real estate developer</option>
+                  <option value="valet_parking_operator">Valet parking operator</option>
+                  <option value="weapons_dealer">Weapons dealer</option>
+                </optgroup>
+                <optgroup label="Entertainment">
+                  <option value="indoor_special_event">Indoor special event</option>
+                  <option value="performing_arts_venue">Performing arts venue</option>
+                  <option value="public_place_of_amusement">Public place of amusement</option>
+                  <option value="raffle">Raffle</option>
+                </optgroup>
+                <optgroup label="Food">
+                  <option value="mobile_food">Mobile food</option>
+                  <option value="produce_merchant">Produce merchant</option>
+                  <option value="retail_food_est_supp_license_for_dogfriendly_areas">Retail food establishment, dog-friendly areas</option>
+                  <option value="retail_food_establishment">Retail food establishment</option>
+                  <option value="shared_kitchen">Shared kitchen</option>
+                  <option value="shared_kitchen_user">Shared kitchen user</option>
+                  <option value="special_event_food">Special event food</option>
+                  <option value="wholesale_food_establishment">Wholesale food establishment</option>
+                </optgroup>
+                <optgroup label="Home-based Business">
+                  <option value="home_office_occupation">Home office occupation</option>
+                </optgroup>
+                <optgroup label="Home Repair and Construction Services">
+                  <option value="boardup_services">Boardup services</option>
+                  <option value="explosives">Explosives</option>
+                  <option value="home_repair">Home repair</option>
+                </optgroup>
+                <optgroup label="Hospital and Commercial Care Facilities">
+                  <option value="assisted_living_establishment">Assisted living establishment</option>
+                  <option value="hospital">Hospital</option>
+                  <option value="longterm_care_facility">Long-term care facility</option>
+                </optgroup>
+                <optgroup label="Liquor">
+                  <option value="airport_pushcart_liquor">Airport pushcart liquor</option>
+                  <option value="caterers_liquor_license">Caterer liquor license</option>
+                  <option value="late_hour">Late hour</option>
+                  <option value="liquor_consumption_on_premises_incidentialactivity">Liquor consumption on premises, incidential activity</option>
+                  <option value="liquor_notforprofit_club">Not-for-profit club</option>
+                  <option value="liquor_outdoor_patio">Liquor outdoor patio</option>
+                  <option value="liquor_tavern">Tavern</option>
+                  <option value="packaged_liquor_sales">Packaged liquor sales</option>
+                  <option value="special_event_liquor">Special event liquor</option>
+                  <option value="wrigley_fiel">Wrigley field</option>
+                </optgroup>
+                <optgroup label="Manufacturing">
+                  <option value="hazardous_materials">Hazardous materials</option>
+                  <option value="manufacturing_establishments">Manufacturing establishments</option>
+                </optgroup>
+                <optgroup label="Motor Vehicle Services">
+                  <option value="motor_vehicle_filling_station">Motor vehicle filling station</option>
+                  <option value="motor_vehicle_repairs_and_services">Motor vehicle repairs and services</option>
+                </optgroup>
+                <optgroup label="Outdoor Vending">
+                  <option value="itinerant_merchant">Itinerant merchant</option>
+                  <option value="navy_pier_vendor">Navy pier vendor</option>
+                  <option value="street_peddler">Street peddler</option>
+                  <option value="street_performer">Street performer</option>
+                </optgroup>
+                <optgroup label="Parking Lot & Parking Garage">
+                  <option value="accessory_garage">Accessory garage</option>
+                  <option value="commercial_garage">Commercial garage</option>
+                </optgroup>
+                <optgroup label="Pawnshop & Secondhand Dealer">
+                  <option value="pawnbroker_pawnshop">Pawnbroker/pawnshop</option>
+                  <option value="secondhand_dealer">Secondhand dealer</option>
+                </optgroup>
+                <optgroup label="Personal Services">
+                  <option value="body_piercing_and_tattooing">Body piercing and tattooing</option>
+                  <option value="massage_establishment">Massage establishment</option>
+                </optgroup>
+                <optgroup label="Tobacco">
+                  <option value="retail_tobacco">Retail tobacco</option>
+                  <option value="wholesale_sales_of_tobacco">Wholesale sales of tobacco</option>
+                </optgroup>
+            </select>
+            <div>
+              <label style="font-size:13px;" for="default">Neighborhood:</label>
+                <input type="text" id="neighborhoods" placeholder="e.g. Uptown" name='neighborhoods'
+                    list = "neighborhoods_list" style="font-family: avenir;">
+              <datalist id="neighborhoods_list" style="font-family: avenir; padding: 6px 7px; margin: 5px 2px;" required>
+                <option value="albany_park">Albany Park</option>
+                 <option value="altgeld_gardens">Altgeld Gardens</option>
+                 <option value="andersonville">Andersonville</option>
+                 <option value="arcadia_terrace">Arcadia Terrace</option>
+                 <option value="archer_heights">Archer Heights</option>
+                 <option value="armour_square">Armour Square</option>
+                 <option value="ashburn">Ashburn</option>
+                 <option value="auburn_gresham">Auburn Gresham</option>
+                 <option value="austin">Austin</option>
+                 <option value="avalon_park">Avalon Park</option>
+                 <option value="avondale">Avondale</option>
+                 <option value="back_of_the_yards">Back of the Yards</option>
+                 <option value="belmont_central">Belmont Central</option>
+                 <option value="belmont_cragin">Belmont Cragin</option>
+                 <option value="belmont_gardens">Belmont Gardens</option>
+                 <option value="belmont_heights">Belmont Heights</option>
+                 <option value="beverly">Beverly</option>
+                 <option value="beverly_view">Beverly View</option>
+                 <option value="beverly_woods">Beverly Woods</option>
+                 <option value="big_oaks">Big Oaks</option>
+                 <option value="bridgeport">Bridgeport</option>
+                 <option value="brighton_park">Brighton Park</option>
+                 <option value="bronzeville">Bronzeville</option>
+                 <option value="bucktown">Bucktown</option>
+                 <option value="burnside">Burnside</option>
+                 <option value="cabrini-green">Abrini Green</option>
+                 <option value="calumet_heights">Calumet Heights</option>
+                 <option value="chicago_lawn">Chicago Lawn</option>
+                 <option value="chicago_loop">Chicago Loop</option>
+                 <option value="clearing"> Clearing</option>
+                 <option value="cottage_grove_heights">Cottage Grove Heights</option>
+                 <option value="cragin">Cragin</option>
+                 <option value="dearborn_homes">Dearborn Homes</option>
+                 <option value="douglas">Douglas</option>
+                 <option value="douglas_park">Douglas Park</option>
+                 <option value="dunning">Dunning</option>
+                 <option value="east_albany_park">East Albany Park</option>
+                 <option value="east_beverly">East Beverly</option>
+                 <option value="east_hyde_park">East Hyde Park</option>
+                 <option value="east_pilsen">East Pilsen</option>
+                 <option value="east_side">East Side</option>
+                 <option value="eden_green">Eden Green</option>
+                 <option value="edgewater">Edgewater</option>
+                 <option value="edgewater_glen">Edgewater Glen</option>
+                 <option value="edison_park">Edison Park</option>
+                 <option value="englewood">Englewood</option>
+                 <option value="forest_glen">Forest Glen</option>
+                 <option value="fuller_park">Fuller Park</option>
+                 <option value="fulton_market">Fulton Market</option>
+                 <option value="gage_park">Gage Park</option>
+                 <option value="garfield_park">Garfield Park</option>
+                 <option value="garfield_ridge">Garfield Ridge</option>
+                 <option value="gold_coast">Gold Coast</option>
+                 <option value="golden_gate">Golden Gate</option>
+                 <option value="goose_island">Goose Island</option>
+                 <option value="grand_crossing">Grand Crossing</option>
+                 <option value="greater_grand_crossing">Greater Grand Crossing</option>
+                 <option value="greektown">Greektown</option>
+                 <option value="groveland_park">Groveland Park</option>
+                 <option value="hanson_park">Hanson Park</option>
+                 <option value="heart_of_italy">Heart of Italy</option>
+                 <option value="hegewisch">Hegewisch</option>
+                 <option value="hermosa">Hermosa</option>
+                 <option value="humboldt_park">Humboldt Park</option>
+                 <option value="hyde_park">Hyde Park</option>
+                 <option value="ickes_praire_homes">Ickes Praire Homes</option>
+                 <option value="irving_park">Irving Park</option>
+                 <option value="irving_woods">Irving Woods</option>
+                 <option value="jackson_park">Jackson Park</option>
+                 <option value="jackson_park_highlands">Jackson Park Highlands</option>
+                 <option value="jefferson_park">Jefferson Park</option>
+                 <option value="jeffrey_manor">Jeffrey Manor</option>
+                 <option value="kelvyn_park">Kelvyn Park</option>
+                 <option value="kennedy_park">Kennedy Park</option>
+                 <option value="kenwood">Kenwood</option>
+                 <option value="lake_view">Lake View</option>
+                 <option value="lake_view_east">Lake View East</option>
+                 <option value="lakewood-balmoral">Lakewood - Balmoral</option>
+                 <option value="lathrop_homes">Lathrop Homes</option>
+                 <option value="leclaire_courts">Leclaire Courts</option>
+                 <option value="legends_south">Legends South</option>
+                 <option value="lincoln_park">Lincoln Park</option>
+                 <option value="lincoln_square">Lincoln Square</option>
+                 <option value="little_india">Little India</option>
+                 <option value="little_italy">Little Italy</option>
+                 <option value="logan_square">Logan Square</option>
+                 <option value="lower_west_side">Lower West Side</option>
+                 <option value="magnolia_glen">Magnolia Glen</option>
+                 <option value="marshall_square">Marshall Square</option>
+                 <option value="marynook">Marynook</option>
+                 <option value="mckinley_park">McKinley Park</option>
+                 <option value="montclare">Montclare</option>
+                 <option value="morgan_park">Morgan Park</option>
+                 <option value="mount_greenwood">Mount Greenwood</option>
+                 <option value="near_north">Near North</option>
+                 <option value="near_north_side">Near North Side</option>
+                 <option value="near_south_side">Near South Side</option>
+                 <option value="near_west_side">Near West Side</option>
+                 <option value="new_city">New City</option>
+                 <option value="north_center">North Center</option>
+                 <option value="north_lawndale">North Lawndale</option>
+                 <option value="north_mayfair">North Mayfair</option>
+                 <option value="north_park">North Park</option>
+                 <option value="norwood_park">Norwood Park</option>
+                 <option value="o'hare">O'Hare</option>
+                 <option value="oakland">Oakland</option>
+                 <option value="old_irving_park">Old Irving Park</option>
+                 <option value="old_town">Old Town</option>
+                 <option value="old_town_triangle">Old Town Triangle</option>
+                 <option value="oriole_park">Oriole Park</option>
+                 <option value="park_boulevard">Park Boulevard</option>
+                 <option value="park_manor">Park Manor</option>
+                 <option value="parkview">Parkview</option>
+                 <option value="portage_park">Portage Park</option>
+                 <option value="pulaski_park">Pulaski Park</option>
+                 <option value="pullman">Pullman</option>
+                 <option value="ravenswood">Ravenswood</option>
+                 <option value="ravenswood_gardens">Ravenswood Gardens</option>
+                 <option value="river_north">River North</option>
+                 <option value="riverdale">Riverdale</option>
+                 <option value="rogers_park">Rogers Park</option>
+                 <option value="roseland">Roseland</option>
+                 <option value="rush_&_division">Rush & Division</option>
+                 <option value="sauganash">Sauganash</option>
+                 <option value="schorsch_village">Schorsch Village</option>
+                 <option value="scottsdale">Scottsdale</option>
+                 <option value="sheffield_&_depaul">Sheffield & DePaul</option>
+                 <option value="sheridan_park">Sheridan Park</option>
+                 <option value="south_chicago">South Chicago</option>
+                 <option value="south_commons">South Commons</option>
+                 <option value="south_deering">South Deering</option>
+                 <option value="south_lawndale">South Lawndale</option>
+                 <option value="south_loop">South Loop</option>
+                 <option value="south_shore">South Shore</option>
+                 <option value="south_side">South Side</option>
+                 <option value="stoney_island_park">Stoney Island Park</option>
+                 <option value="streeterville">Streeterville</option>
+                 <option value="the_bush">The Bush</option>
+                 <option value="tri-taylor">Tri-Taylor</option>
+                 <option value="trumbull_park">Trumbull Park</option>
+                 <option value="union_ridge">Union Ridge</option>
+                 <option value="uptown">Uptown</option>
+                 <option value="vet's_park">Vet's Park"</option>
+                 <option value="washington_heights">Washington Heights</option>
+                 <option value="washington_park">Washington Park</option>
+                 <option value="wentworth_gardens">Wentworth Gardens</option>
+                 <option value="west_chesterfield">West Chesterfield</option>
+                 <option value="west_elsdon">West Elsdon</option>
+                 <option value="west_englewood">West Englewood</option>
+                 <option value="west_jackson_boulevard_district">West Jackson Boulevard District</option>
+                 <option value="west_lawn">West Lawn</option>
+                 <option value="west_loop">West Loop</option>
+                 <option value="west_morgan_park">West Morgan Park</option>
+                 <option value="west_pullman">West Pullman</option>
+                 <option value="west_ridge">West Ridge</option>
+                 <option value="west_town">West Town</option>
+                 <option value="woodlawn">Woodlawn</option>
+                 <option value="wrigleyville">Wrigleyville</option>
+               </datalist></p>
+               </div>
+               <p>
+               <div>
+                 <label class="container" style="font-size:13px;" for="default">Number of years already in business:</label>
+                 <input name="years_in_business" type="number" placeholder="0" min=0 max=10
+                  style ="font-family: avenir; width:50px; padding: 5px 8px;margin: 5px 0; box-sizing: border-box;border-radius: 4px 4px 4px 4px;
+                  margin: 5px 0; border: 1px solid #ccc;">
+                </p>
+              <p>
+                <input type ="submit" value="Submit" style="background-color:C0C0C0;padding: 12px; width: 70px; height: 13px;border-radius: 15px 15px 15px 15px;
+                  line-height:.1em;color:black; text-size:13PX; font-weight: bold;alight: middle; border:none;font-family: avenir;"/>
+                </p>
+              </div>
+            </form>
+          </body>
+        </CENTER>
+</html>
