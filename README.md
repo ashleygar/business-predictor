@@ -1,4 +1,4 @@
-The Business Predictor
+##The Business Predictor
 
 This project uses Chicago business data obtained from the City of Chicago website (updated by the website and downloaded for this project on February 10, 2020).  Each entry in the dataset is a unique license issued, renewed, cancelled, etc. for a respective business.
 
